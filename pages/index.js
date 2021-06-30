@@ -1,25 +1,27 @@
-import StoreHeading from '@/components/StoreHeading'
-import ProductListings from '@/components/ProductListings'
-import { getAllProductsInCollection } from '@/lib/shopify'
+import Hero from "@/components/Hero";
+import NewsletterSubscribe from "@/components/NewsletterSubscribe";
+import Slider from "@/components/Slider";
+
+import { getAllProductsInCollection } from "@/lib/shopify";
 
 function IndexPage({ products }) {
-
   return (
-    <div className="mx-auto max-w-6xl">
-      <StoreHeading />
-      <ProductListings products={products} />      
+    <div className="md:w-full w-full mx-auto">
+      <Hero />
+      <Slider />
+      <NewsletterSubscribe />
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const products = await getAllProductsInCollection()
+  const products = await getAllProductsInCollection();
 
   return {
     props: {
-      products
+      products,
     },
-  }
+  };
 }
 
-export default IndexPage
+export default IndexPage;

@@ -1,34 +1,52 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false,
   theme: {
     extend: {
-      height: theme => ({
-        '112': '28rem',
-        '120': '30rem',
+      height: (theme) => ({
+        112: "28rem",
+        120: "30rem",
       }),
-      minHeight: theme => ({
-        '80': '20rem',
+      minHeight: (theme) => ({
+        80: "20rem",
       }),
       colors: {
         palette: {
-          lighter: '#F5F3FF',
-          light: '#DDD6FE',
-          primary: '#5B21B6',
-          dark: '#4C1D95',
+          lighter: "#FFFFFF",
+          light: "#DDD6FE",
+          primary: "#111827",
+          dark: "#EF0909",
+          black: "#000000",
         },
       },
+      letterSpacing: {
+        tightest: "-.075em",
+        tighter: "-.05em",
+        tight: "-.025em",
+        normal: "0",
+        wide: ".025em",
+        wider: ".05em",
+        widest: ".25em",
+        widest: ".30em",
+      },
       fontFamily: {
-        primary: ['"Josefin Sans"']
-      }
+        primary: ['"Fira Sans Condensed", "sans-serif"'],
+      },
+      backgroundImage: (theme) => ({
+        "hero-pattern": "url('/heroimg.jpg')",
+      }),
+      borderColor: (theme) => ({
+        primary: "#111827",
+        danger: "#000000",
+      }),
     },
   },
   variants: {
-    extend: {},
+    extend: { width: ["responsive", "hover"] },
   },
   plugins: [
     require("@tailwindcss/forms")({
-      strategy: 'class',
+      strategy: "class",
     }),
   ],
-}
+};

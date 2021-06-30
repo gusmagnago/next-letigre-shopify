@@ -1,50 +1,36 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Price from '@/components/Price'
+import Image from "next/image";
+import Link from "next/link";
+import Price from "@/components/Price";
 
 function ProductCard({ product }) {
-  const handle = product.node.handle
-  const title = product.node.title
-  const description = product.node.description
-  const price = product.node.variants.edges[0].node.price
+  const handle = product.node.handle;
+  const title = product.node.title;
+  const description = product.node.description;
+  const price = product.node.variants.edges[0].node.price;
 
-  const imageNode = product.node.images.edges[0].node
+  const imageNode = product.node.images.edges[0].node;
 
   return (
-    <Link
-      href={`/products/${handle}`}
-      passHref
-    >
-      <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
-        <div className="h-72 border-b-2 border-palette-lighter relative">
+    <Link href={`/products/${handle}`} passHref>
+      <a className="w-72 mx-auto">
+        <div className="h-80 relative w-full">
           <Image
             src={imageNode.originalSrc}
             alt={imageNode.altText}
             layout="fill"
-            className="transform duration-500 ease-in-out hover:scale-110"
+            className="hover:scale-110 duration-500 ease-in-out transform"
           />
         </div>
-        <div className="h-48 relative">
-          <div className="font-primary text-palette-primary text-2xl pt-4 px-4 font-semibold">
+        <div className="h-5 uppercase">
+          <div className="font-primary text-palette-primary font-semibold">
             {title}
           </div>
-          <div className="text-lg text-gray-600 p-4 font-primary font-light">
-            {description}
-          </div>
-          <div
-            className="text-palette-dark font-primary font-medium text-base absolute bottom-0 right-0 mb-4 pl-8 pr-4 pb-1 pt-2 bg-palette-lighter 
-            rounded-tl-sm triangle"
-          >
-            <Price
-              currency="$"
-              num={price}
-              numSize="text-lg"
-            />
+          <div className="text-palette-primary font-primary bg-palette-lighter triangle text-base font-medium">
+            <Price currency="€" num={price} numSize="text-md" />
           </div>
         </div>
       </a>
     </Link>
-  )
+  );
 }
-
-export default ProductCard
+export default ProductCard;
