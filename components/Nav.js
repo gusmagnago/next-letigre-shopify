@@ -35,7 +35,6 @@ function Nav() {
           </a>
         </Link>
         <div>
-          {/*   <Link href="/cart" passHref> */}
           <a className="relative cursor-pointer" aria-label="cart">
             <FontAwesomeIcon
               className="text-palette-primary w-6 m-auto"
@@ -43,13 +42,11 @@ function Nav() {
               onClick={() => setCartOpen(!openCart)}
             />
             {cartItems === 0 ? null : (
-              <div className="bg-palette-lighter filter backdrop-filter backdrop-blur bg-opacity-30 absolute top-0 right-0 px-2 py-1 text-xs font-semibold text-gray-900 transform translate-x-10 -translate-y-3 rounded-full">
+              <div className="bg-palette-dark filter backdrop-filter backdrop-blur bg-opacity-30 absolute top-0 right-0 px-2 py-1 text-xs font-semibold text-gray-900 transform translate-x-10 -translate-y-3 rounded-full">
                 {cartItems}
               </div>
             )}
           </a>
-          {/* {openCart && <CartTable cart={cart} />} */}
-          {/*   </Link> */}
           {openCart && <CartSide cart={cart} />}
         </div>
       </div>
