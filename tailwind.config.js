@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         palette: {
           lighter: "#FFFFFF",
-          light: "#DDD6FE",
+          light: "#E7E7E7",
           primary: "#111827",
           dark: "#EF0909",
           black: "#000000",

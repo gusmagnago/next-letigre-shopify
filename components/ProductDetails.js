@@ -10,7 +10,6 @@ function ProductDetails({ productData }) {
 
   return (
     <div className="md:w-1/2 min-h-128 flex flex-col justify-between w-full h-full max-w-xs mx-auto space-y-4">
-      <BackToProductButton />
       <ProductInfo
         title={productData.title}
         description={productData.description}
@@ -23,6 +22,7 @@ function ProductDetails({ productData }) {
         mainImg={productData.images.edges[0].node}
         setVariantPrice={setVariantPrice}
       />
+      <BackToProductButton />
     </div>
   );
 }

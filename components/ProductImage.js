@@ -24,7 +24,7 @@ function ProductImage({ images }) {
       <div className="border-palette-lighter relative flex border-t">
         <button
           aria-label="left-scroll"
-          className="bg-palette-lighter hover:bg-palette-light absolute left-0 z-10 h-32 opacity-75"
+          className="bg-palette-lighter hover:bg-palette-light filter backdrop-filter backdrop-blur bg-opacity-30 bg-palette-light absolute left-0 z-10 h-32 opacity-75"
           onClick={() => scroll(-300)}
         >
           <FontAwesomeIcon

@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
 import { useCartContext } from "@/context/Store";
 import Menu from "@/components/Menu";
-import CartTable from "@/components/CartTable";
 import CartSide from "@/components/CartSide";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";

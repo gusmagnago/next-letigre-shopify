@@ -63,7 +63,7 @@ function CartTable({ cart }) {
                   step="1"
                   value={item.variantQuantity}
                   onChange={(e) => updateItem(item.variantId, e.target.value)}
-                  className="form-input focus:border-palette-light focus:ring-palette-light w-16 text-gray-900"
+                  className="form-input focus:border-palette-dark focus:ring-palette-dark w-16 text-gray-900"
                 />
               </td>
               <td className="font-primary sm:px-6 sm:table-cell hidden px-4 py-4 text-base font-light">
