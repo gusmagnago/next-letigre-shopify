@@ -1,18 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function CheckOutButton({ webUrl }) {
   return (
     <a
       href={webUrl}
       aria-label="checkout-products"
-      className="bg-palette-primary text-white text-lg font-primary font-semibold pt-2 pb-1 leading-relaxed flex 
-      justify-center items-center focus:ring-1 focus:ring-palette-light focus:outline-none w-full hover:bg-palette-dark rounded-sm"
+      className="bg-palette-lighter filter backdrop-filter backdrop-blur h-11 font-primary focus:outline-none hover:bg-palette-black hover:text-white bg-opacity-30 flex justify-center w-full pt-2 pb-2 text-lg font-semibold leading-relaxed tracking-widest text-black"
     >
       Check Out
-      <FontAwesomeIcon icon={faArrowRight} className="w-4 ml-2 inline-flex" />
+      <FontAwesomeIcon icon={faArrowRight} className="inline-flex w-4 ml-2" />
     </a>
-  )
+  );
 }
-
-export default CheckOutButton
+export default CheckOutButton;

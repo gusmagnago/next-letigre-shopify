@@ -27,7 +27,6 @@ function CartSide({ cart }) {
           <img
             src={item.productImage.originalSrc}
             alt={item.productImage.altText}
-            height={150}
             width={100}
             className="m-1"
           />

@@ -22,10 +22,10 @@ function CartTable({ cart }) {
   }
 
   return (
-    <div className="min-h-80 sm:my-8 absolute w-full max-w-2xl mx-auto my-4">
+    <div className=" sm:my-8 w-full max-w-2xl mx-auto my-4">
       <table className="mx-auto">
         <thead>
-          <tr className="sm:text-sm text-palette-primary border-palette-light text-xs uppercase border-b">
+          <tr className=" sm:text-sm text-palette-primary border-palette-primary text-xs uppercase border-b">
             <th className="font-primary px-6 py-4 font-normal">Product</th>
             <th className="font-primary px-6 py-4 font-normal">Quantity</th>
             <th className="font-primary sm:table-cell hidden px-6 py-4 font-normal">
@@ -38,18 +38,17 @@ function CartTable({ cart }) {
           {cartItems.map((item) => (
             <tr
               key={item.variantId}
-              className="sm:text-base text-sm text-center text-gray-600"
+              className="sm:text-base text-sm text-center text-gray-600 uppercase"
             >
               <td className="font-primary sm:px-6 flex items-center px-4 py-4 font-medium">
                 <img
                   src={item.productImage.originalSrc}
                   alt={item.productImage.altText}
-                  height={64}
-                  width={64}
+                  width={100}
                   className={`hidden sm:inline-flex`}
                 />
                 <Link passHref href={`/products/${item.productHandle}`}>
-                  <a className="hover:text-palette-dark pt-1">
+                  <a className="hover:text-palette-dark p-1">
                     {item.productTitle}, {item.variantTitle}
                   </a>
                 </Link>
@@ -64,11 +63,11 @@ function CartTable({ cart }) {
                   step="1"
                   value={item.variantQuantity}
                   onChange={(e) => updateItem(item.variantId, e.target.value)}
-                  className="form-input focus:border-palette-light focus:ring-palette-light w-16 text-gray-900 border border-gray-300 rounded-sm"
+                  className="form-input focus:border-palette-light focus:ring-palette-light w-16 text-gray-900"
                 />
               </td>
               <td className="font-primary sm:px-6 sm:table-cell hidden px-4 py-4 text-base font-light">
-                <Price currency="$" num={item.variantPrice} numSize="text-lg" />
+                <Price currency="€" num={item.variantPrice} numSize="text-lg" />
               </td>
               <td className="font-primary sm:px-6 px-4 py-4 font-medium">
                 <button
@@ -85,13 +84,13 @@ function CartTable({ cart }) {
             </tr>
           ))}
           {subtotal === 0 ? null : (
-            <tr className="text-center">
+            <tr className="text-center border-t-2">
               <td></td>
               <td className="font-primary sm:px-6 px-4 py-4 text-base font-semibold text-gray-600 uppercase">
                 Subtotal
               </td>
               <td className="font-primary text-palette-primary sm:px-6 px-4 py-4 text-lg font-medium">
-                <Price currency="$" num={subtotal} numSize="text-xl" />
+                <Price currency="€" num={subtotal} numSize="text-xl" />
               </td>
               <td></td>
             </tr>
@@ -101,5 +100,4 @@ function CartTable({ cart }) {
     </div>
   );
 }
-
 export default CartTable;

@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 function Layout({ children }) {
   return (
     <CartProvider>
-      <div className="min-h-screen">
+      <div className="font-primary min-h-screen">
         <Nav />
         <main>{children}</main>
         {/*  <Footer /> */}
