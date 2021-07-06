@@ -8,7 +8,7 @@ function ProductInfo({ title, description, price }) {
       </h1>
       <p className="text-lg font-medium uppercase">{description}</p>
       <div className="text-palette-primary px-1 py-4 text-xl font-medium">
-        <Price currency="$" num={price} numSize="text-2xl" />
+        <Price currency="€" num={price} numSize="text-2xl" />
       </div>
     </div>
   );

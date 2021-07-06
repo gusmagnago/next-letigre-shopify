@@ -5,9 +5,8 @@ import Price from "@/components/Price";
 function ProductCard({ product }) {
   const handle = product.node.handle;
   const title = product.node.title;
-  const description = product.node.description;
+  /* const description = product.node.description; */
   const price = product.node.variants.edges[0].node.price;
-
   const imageNode = product.node.images.edges[0].node;
 
   return (

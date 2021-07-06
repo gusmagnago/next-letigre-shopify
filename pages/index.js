@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Instagram from "@/components/Instagram";
 import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import Slider from "@/components/Slider";
 
@@ -10,10 +11,10 @@ function IndexPage({ products }) {
       <Hero />
       <Slider />
       <NewsletterSubscribe />
+      <Instagram />
     </div>
   );
 }
-
 export async function getStaticProps() {
   const products = await getAllProductsInCollection();
 
@@ -23,5 +24,4 @@ export async function getStaticProps() {
     },
   };
 }
-
 export default IndexPage;

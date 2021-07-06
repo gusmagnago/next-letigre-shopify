@@ -13,6 +13,8 @@ module.exports = withPWA({
     siteUrl: "https://letigrestore.com/",
     siteImagePreviewUrl: "/images/main.jpg",
     twitterHandle: "@lLeTigreStore",
+    instaToken:
+      "IGQVJXWF9nSTlUanJydi1GX3E3aW5mcFVTY3NhcEFrVS1INklWdEUxZAHd6ZAl9KVXFVUmYwczBYQTlRbkp0c2JtMnVObzlrQmtqN3RtYmV4cG5fU3dMelhuOEFYVjBRYm02NUNBLURMQVdiUVFWczdCVgZDZD",
   },
   images: {
     domains: ["cdn.shopify.com"],

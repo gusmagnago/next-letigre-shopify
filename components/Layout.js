@@ -5,13 +5,12 @@ import Footer from "@/components/Footer";
 function Layout({ children }) {
   return (
     <CartProvider>
-      <div className="font-primary min-h-screen">
+      <div className="font-primary h-full">
         <Nav />
         <main>{children}</main>
-        {/*  <Footer /> */}
+        <Footer />
       </div>
     </CartProvider>
   );
 }
-
 export default Layout;

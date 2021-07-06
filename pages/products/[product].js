@@ -3,7 +3,7 @@ import ProductSection from "@/components/ProductSection";
 
 function ProductPage({ productData }) {
   return (
-    <div className="sm:pt-10 py-10">
+    <div className="sm:pt-10 min-h-screen py-10">
       <ProductSection productData={productData} />
     </div>
   );

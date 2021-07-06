@@ -21,9 +21,9 @@ function CartSide({ cart }) {
   }
 
   return (
-    <div className="text-palette-primary h-96 bg-palette-lighter p-4 right-0 font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 w-1/4 absolute z-0  h-auto -ml-10 space-x-4 right-1.5">
+    <div className="text-palette-primary h-96 bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 m-9 right-2 absolute right-0 z-0 w-1/4 h-auto p-2 space-x-4">
       {cartItems.map((item) => (
-        <div className="justify-evenly flex flex-row p-4" key={item.variantId}>
+        <div className="justify-evenly flex flex-row" key={item.variantId}>
           <img
             src={item.productImage.originalSrc}
             alt={item.productImage.altText}
@@ -31,13 +31,14 @@ function CartSide({ cart }) {
             className="m-1"
           />
           <Link passHref href={`/products/${item.productHandle}`}>
-            <a className="hover:text-palette-dark flex flex-col pt-1 m-2">
+            <a className="hover:text-palette-dark flex flex-col pt-1 m-2 text-sm">
               {item.productTitle}
               <br />
               Size / Color: {item.variantTitle}
+              <p className="text-xs">change</p>
             </a>
           </Link>
-          <div className=" flex flex-col items-center m-2">
+          <div className=" flex flex-col items-center m-2 text-sm">
             <p>quantity</p>
             <input
               type="number"
@@ -60,7 +61,7 @@ function CartSide({ cart }) {
           </div>
         </div>
       ))}
-      <div className="h-auto p-4 border-t-2">
+      <div className="h-auto border-t-2">
         {subtotal === 0 ? null : (
           <div className="flex flex-row justify-between">
             <p>Subtotal:</p>
