@@ -3,13 +3,13 @@ import { useUpdateCartQuantityContext } from "@/context/Store";
 import { getCartSubTotal } from "@/utils/helpers";
 import Link from "next/link";
 import Price from "@/components/Price";
-import { useCartContext } from "@/context/Store";
+/* import { useCartContext } from "@/context/Store"; */
 
 function CartSide({ cart }) {
   const updateCartQuantity = useUpdateCartQuantityContext();
   const [cartItems, setCartItems] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
-  const [checkoutUrl] = useCartContext();
+  /* const [checkoutUrl] = useCartContext(); */
 
   useEffect(() => {
     setCartItems(cart);

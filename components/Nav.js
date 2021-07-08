@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import { useCartContext } from "@/context/Store";
 import Menu from "@/components/Menu";
