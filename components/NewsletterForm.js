@@ -6,8 +6,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState(null);
 
   /**
-   * Handle form submit.
-   *
    * @return {{value}|*|boolean|null}
    */
   const handleFormSubmit = () => {
@@ -23,8 +21,6 @@ const NewsletterForm = ({ status, message, onValidated }) => {
   };
 
   /**
-   * Handle Input Key Event.
-   *
    * @param event
    */
   const handleInputKeyEvent = (event) => {

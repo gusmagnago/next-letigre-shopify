@@ -13,7 +13,7 @@ function ProductImage({ images }) {
 
   return (
     <div className="md:w-1/2 w-full max-w-md bg-white">
-      <div className="h-96 relative">
+      <div className="card-img relative">
         <Image
           src={mainImg.originalSrc}
           alt={mainImg.altText}
@@ -24,7 +24,7 @@ function ProductImage({ images }) {
       <div className="border-palette-lighter relative flex border-t">
         <button
           aria-label="left-scroll"
-          className="bg-palette-lighter hover:bg-palette-light filter backdrop-filter backdrop-blur bg-opacity-30 bg-palette-light absolute left-0 z-10 h-32 opacity-75"
+          className="bg-palette-lighter hover:bg-palette-light filter backdrop-filter backdrop-blur bg-opacity-30 absolute left-0 z-10 h-full opacity-75"
           onClick={() => scroll(-300)}
         >
           <FontAwesomeIcon
@@ -35,26 +35,26 @@ function ProductImage({ images }) {
         <div
           ref={ref}
           style={{ scrollBehavior: "smooth" }}
-          className="border-palette-lighter flex w-full space-x-1 overflow-auto border-t"
+          className="border-palette-lighter flex w-full h-48 space-x-1 overflow-auto border-t"
         >
           {images.map((imgItem, index) => (
             <button
               key={index}
-              className=" relative flex-shrink-0 w-40 h-32 rounded-sm"
+              className=" relative flex-shrink-0 w-40 h-auto rounded-sm"
               onClick={() => setMainImg(imgItem.node)}
             >
               <Image
                 src={imgItem.node.originalSrc}
                 alt={imgItem.node.altText}
                 layout="fill"
-                className=""
+                className="h-auto"
               />
             </button>
           ))}
         </div>
         <button
           aria-label="right-scroll"
-          className="bg-palette-lighter hover:bg-palette-light absolute right-0 z-10 h-32 opacity-75"
+          className="bg-palette-lighter hover:bg-palette-light absolute right-0 z-10 h-full opacity-75"
           onClick={() => scroll(300)}
         >
           <FontAwesomeIcon

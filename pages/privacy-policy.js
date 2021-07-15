@@ -2,10 +2,10 @@ import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 
 function PrivacyPolicy() {
-  const pageTitle = `Cart | ${process.env.siteTitle}`;
+  const pageTitle = `PRIVACY POLICY | ${process.env.siteTitle}`;
 
   return (
-    <div className=" h-full mx-auto mb-20">
+    <div className=" h-full min-h-screen mx-auto mb-20">
       <SEO title={pageTitle} />
       <PageTitle text="PRIVACY POLICY" />
       <div className="w-10/12 px-2 mx-auto space-y-4">

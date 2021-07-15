@@ -1,11 +1,11 @@
 import SEO from "@/components/SEO";
 import PageTitle from "@/components/PageTitle";
 
-function CartPage() {
-  const pageTitle = `Cart | ${process.env.siteTitle}`;
+function Contact() {
+  const pageTitle = `TALK TO | ${process.env.siteTitle}`;
 
   return (
-    <div className="container h-full mx-auto mb-20">
+    <div className="container min-h-screen mx-auto mb-20">
       <SEO title={pageTitle} />
       <PageTitle text="TALK TO US" />
       <div className="max-w-sm px-2 mx-auto space-y-4">
@@ -27,4 +27,4 @@ function CartPage() {
     </div>
   );
 }
-export default CartPage;
+export default Contact;

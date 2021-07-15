@@ -29,7 +29,7 @@ function CartSide({ cart }) {
             className="m-1"
           />
           <Link passHref href={`/products/${item.productHandle}`}>
-            <a className="hover:text-palette-dark flex flex-col pt-1 m-2 text-sm">
+            <a className="hover:text-palette-dark cart-info flex flex-col pt-1 m-2 text-sm">
               {item.productTitle}
               <br />
               Size / Color: {item.variantTitle}

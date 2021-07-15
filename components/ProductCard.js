@@ -11,8 +11,8 @@ function ProductCard({ product }) {
 
   return (
     <Link href={`/products/${handle}`} passHref>
-      <a className="w-72 h-auto mx-auto">
-        <div className="h-80 relative w-full">
+      <a className="w-72 card mx-auto">
+        <div className="h-96 relative w-full">
           <Image
             src={imageNode.originalSrc}
             alt={imageNode.altText}

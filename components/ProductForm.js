@@ -18,17 +18,16 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
 
   function handleSizeChange(e) {
     setVariantId(e);
-    // send back size change
+
     const selectedVariant = variants.filter((v) => v.node.id === e).pop();
     setVariantPrice(selectedVariant.node.price);
 
-    // update variant
     setVariant(selectedVariant);
   }
 
   async function handleAddToCart() {
     const varId = variant.node.id;
-    // update store context
+
     if (quantity !== "") {
       addToCart({
         productTitle: title,

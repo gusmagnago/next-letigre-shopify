@@ -10,7 +10,7 @@ function CartPage() {
   const [cart, checkoutUrl] = useCartContext();
 
   return (
-    <div className="container mx-auto mb-20">
+    <div className="container min-h-screen mx-auto mb-20">
       <SEO title={pageTitle} />
       <PageTitle text="Your Cart" />
       <CartTable cart={cart} />

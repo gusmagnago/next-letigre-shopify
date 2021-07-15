@@ -21,6 +21,17 @@ body {
   border-left-color: #ffffff;
 }
 
+.card-img {
+  height: 38rem;
+}
+
+.card {
+  height: 30rem;
+}
+
+.cart-info {
+  min-width: 7rem;
+}
 .fade-in {
   animation: fadeIn 0.4s;
 }
