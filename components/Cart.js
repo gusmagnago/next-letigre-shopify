@@ -23,7 +23,7 @@ function Cart() {
   }, [cart]);
 
   return (
-    <>
+    <div>
       <FontAwesomeIcon
         className="text-palette-primary w-6 m-auto cursor-pointer"
         icon={faShoppingBag}
@@ -34,8 +34,12 @@ function Cart() {
           {cartItems}
         </div>
       )}
-      {openCart && <CartSide cart={cart} onClick={Cart.handleClickOutside} />}
-    </>
+      {openCart && (
+        <div className="fade-in" onClick={Cart.handleClickOutside}>
+          <CartSide cart={cart} />
+        </div>
+      )}
+    </div>
   );
 }
 

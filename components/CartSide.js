@@ -19,7 +19,7 @@ function CartSide({ cart }) {
   }
 
   return (
-    <div className="sm:min-w-screen text-palette-primary bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 w-96 -right-56 absolute z-0 h-auto p-4">
+    <div className="sm:min-w-screen text-palette-primary bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 w-96 fixed right-0 h-auto p-4 m-2">
       {cartItems.map((item) => (
         <div className="justify-evenly flex flex-row" key={item.variantId}>
           <img

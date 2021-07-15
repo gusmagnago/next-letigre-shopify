@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  min-width: 24rem;
+}
+
 .triangle {
 }
 
@@ -15,4 +19,17 @@
   left: 0em;
   border: 1em solid transparent;
   border-left-color: #ffffff;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
