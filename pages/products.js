@@ -3,9 +3,9 @@ import { getAllProductsInCollection } from "@/lib/shopify";
 
 function Products({ products }) {
   return (
-    <>
+    <div className="min-h-screen">
       <ProductListings products={products} />
-    </>
+    </div>
   );
 }
 
