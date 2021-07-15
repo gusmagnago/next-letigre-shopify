@@ -6,13 +6,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Menu() {
   const [openMenu, setOpenMenu] = useState(false);
-
   const toggle = () => setOpenMenu(!openMenu);
 
   Menu.handleClickOutside = () => setOpenMenu(false);
 
   return (
-    <div>
+    <>
       <FontAwesomeIcon
         className="text-palette-primary w-6 m-auto"
         type="button"
@@ -20,7 +19,10 @@ function Menu() {
         onClick={toggle}
       />
       {openMenu && (
-        <div className="text-palette-primary bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 absolute z-0 flex w-auto -ml-10 space-x-4">
+        <div
+          className="text-palette-primary bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 absolute z-0 flex w-auto -ml-10 space-x-4"
+          /* onClick={Menu.handleClickOutside} */
+        >
           <ul className="font-primary focus:ring-1 focus:ring-palette-light focus:outline-none font-semibold leading-relaxed tracking-wider uppercase">
             <Link href="/collections/rings">
               <li className="hover:bg-palette-black hover:text-white hover:w-full w-64 p-5">
@@ -45,7 +47,7 @@ function Menu() {
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 }
 

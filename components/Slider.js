@@ -19,7 +19,7 @@ function Slider() {
             <div className="relative flex flex-row p-5 m-5">
               <div>
                 <a
-                  href="/products/necklaces"
+                  href="/collections/necklaces"
                   className=" top-3/4 left-1 bg-palette-lighter w-96 filter backdrop-filter backdrop-blur font-primary focus:ring-1 focus:ring-palette-light focus:outline-none hover:bg-palette-black hover:text-white bg-opacity-30 absolute flex justify-center pt-2 pb-2 text-lg font-semibold leading-relaxed tracking-widest text-black"
                 >
                   SHOP NECKLACES
@@ -37,7 +37,7 @@ function Slider() {
               </div>
               <div>
                 <a
-                  href="/products/rings"
+                  href="/collections/rings"
                   className=" top-3/4 right-1 bg-palette-lighter w-96 filter backdrop-filter backdrop-blur font-primary focus:ring-1 focus:ring-palette-light focus:outline-none hover:bg-palette-black hover:text-white bg-opacity-30 absolute flex justify-center pt-2 pb-2 text-lg font-semibold leading-relaxed tracking-widest text-black"
                 >
                   SHOP RINGS
@@ -52,7 +52,7 @@ function Slider() {
               </div>
               <div>
                 <a
-                  href="/products/bracelets"
+                  href="/collections/bracelets"
                   className=" top-3/4 left-1 bg-palette-lighter w-96 filter backdrop-filter backdrop-blur font-primary focus:ring-1 focus:ring-palette-light focus:outline-none hover:bg-palette-black hover:text-white bg-opacity-30 absolute flex justify-center pt-2 pb-2 text-lg font-semibold leading-relaxed tracking-widest text-black"
                 >
                   SHOP BRACELETS

@@ -3,13 +3,11 @@ import { useUpdateCartQuantityContext } from "@/context/Store";
 import { getCartSubTotal } from "@/utils/helpers";
 import Link from "next/link";
 import Price from "@/components/Price";
-/* import { useCartContext } from "@/context/Store"; */
 
 function CartSide({ cart }) {
   const updateCartQuantity = useUpdateCartQuantityContext();
   const [cartItems, setCartItems] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
-  /* const [checkoutUrl] = useCartContext(); */
 
   useEffect(() => {
     setCartItems(cart);
@@ -21,7 +19,7 @@ function CartSide({ cart }) {
   }
 
   return (
-    <div className="text-palette-primary h-96 bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 m-9 right-2 absolute right-0 z-0 w-1/4 h-auto p-2 space-x-4">
+    <div className="sm:min-w-screen text-palette-primary bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 w-96 -right-56 absolute z-0 h-auto p-4">
       {cartItems.map((item) => (
         <div className="justify-evenly flex flex-row" key={item.variantId}>
           <img
@@ -61,17 +59,20 @@ function CartSide({ cart }) {
           </div>
         </div>
       ))}
-      <div className="h-auto border-t-2">
+      <div className=" border-palette-primary mt-2 border-t-2">
         {subtotal === 0 ? null : (
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between px-4 my-2">
             <p>Subtotal:</p>
             <div>
               <Price currency="€" num={subtotal} numSize="text-md" />
             </div>
           </div>
         )}
+        <p className="flex justify-center text-xs">
+          Shipping + taxes calculated at checkout
+        </p>
         <Link href="/cart" passHref>
-          <div className="focus:outline-none bg-palette-lighter h-11 font-primary hover:bg-palette-black hover:text-white w-full pt-2 pb-2 mt-4 text-lg font-semibold leading-relaxed tracking-widest text-center text-black cursor-pointer">
+          <div className="focus:outline-none bg-palette-lighter h-11 font-primary hover:bg-palette-black hover:text-white w-full py-2 mt-4 text-lg font-semibold leading-relaxed tracking-widest text-center text-black cursor-pointer">
             <a>CONFIRM</a>
           </div>
         </Link>

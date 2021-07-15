@@ -7,7 +7,7 @@ function Footer() {
   const [isShown, setIsShown] = useState(false);
 
   return (
-    <footer className="font-primary h- flex flex-col py-4">
+    <footer className=" font-primary flex flex-col py-4">
       <div className="justify-evenly flex p-4 uppercase">
         <Link href="/about" passHref>
           <a className="hover:text-palette-dark">Our Story</a>
