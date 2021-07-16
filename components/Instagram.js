@@ -5,7 +5,7 @@ function Instagram() {
   const instaToken = process.env.instaToken;
 
   return (
-    <div>
+    <div className="z-0">
       <InstagramFeed token={instaToken} counter="6" />
     </div>
   );

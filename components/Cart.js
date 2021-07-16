@@ -4,6 +4,7 @@ import CartSide from "@/components/CartSide";
 import onClickOutside from "react-onclickoutside";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
   const cart = useCartContext()[0];
@@ -34,11 +35,16 @@ function Cart() {
           {cartItems}
         </div>
       )}
-      {openCart && (
-        <div className="fade-in" onClick={Cart.handleClickOutside}>
-          <CartSide cart={cart} />
-        </div>
-      )}
+      {openCart &&
+        (cartItems === 0 ? (
+          <div>
+            <EmptyCart />
+          </div>
+        ) : (
+          <div className="fade-in" onClick={Cart.handleClickOutside}>
+            <CartSide cart={cart} />
+          </div>
+        ))}
     </div>
   );
 }

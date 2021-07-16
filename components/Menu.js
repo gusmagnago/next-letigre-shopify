@@ -20,7 +20,7 @@ function Menu() {
       />
       {openMenu && (
         <div
-          className="text-palette-primary fade-in bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 absolute z-0 flex w-auto -ml-10 space-x-4"
+          className="text-palette-primary fade-in bg-palette-lighter font-primary filter backdrop-filter backdrop-blur bg-opacity-30 mt-9 absolute z-40 flex w-auto -ml-10 space-x-4"
           onClick={Menu.handleClickOutside}
         >
           <ul className="font-primary focus:ring-1 focus:ring-palette-light focus:outline-none font-semibold leading-relaxed tracking-wider uppercase">

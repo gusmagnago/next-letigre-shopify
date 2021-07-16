@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <footer className=" font-primary flex flex-col py-4">
-      <div className="justify-evenly flex p-4 uppercase">
+      <div className="justify-evenly flex p-4 text-center uppercase">
         <Link href="/about" passHref>
           <a className="hover:text-palette-dark">Our Story</a>
         </Link>

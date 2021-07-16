@@ -5,7 +5,7 @@ import Cart from "@/components/Cart";
 function Nav() {
   return (
     <header className="border-palette-lighter sticky top-0 z-20 bg-white border-b">
-      <div className="z-40 flex items-center justify-between max-w-6xl px-6 py-2 mx-auto">
+      <div className="z-50 flex items-center justify-between max-w-6xl px-6 py-2 mx-auto">
         <div>
           <a className="relative cursor-pointer" aria-label="menu">
             <Menu />

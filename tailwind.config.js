@@ -19,9 +19,6 @@ module.exports = {
           black: "#000000",
         },
       },
-      screens: {
-        sm: "640px",
-      },
       letterSpacing: {
         tightest: "-.075em",
         tighter: "-.05em",

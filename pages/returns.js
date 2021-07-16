@@ -20,14 +20,14 @@ function ReturnPolicy() {
         </p>
         <p>
           To start a return, you can contact us at
-          <text> customercare@letigrestore.com</text>. If your return is
-          accepted, we’ll send you a return shipping label, as well as
-          instructions on how and where to send your package. Items sent back to
-          us without first requesting a return will not be accepted.
+          <b className="font-semibold"> customercare@letigrestore.com</b>. If
+          your return is accepted, we’ll send you a return shipping label, as
+          well as instructions on how and where to send your package. Items sent
+          back to us without first requesting a return will not be accepted.
         </p>
         <p className="pb-6">
           You can always contact us for any return question at
-          <text> customercare@letigrestore.com</text>.
+          <b className="font-semibold"> customercare@letigrestore.com</b>.
         </p>
         <text className="text-lg font-bold">Damages and issues</text>
         <p className="pb-6">

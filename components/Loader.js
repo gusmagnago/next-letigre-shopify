@@ -29,7 +29,7 @@ function Loader() {
             transform="translate(-7.69 -4.74)"
             animate={{ scale: [0, 0.8, 0] }}
             transition={{
-              loop: Infinity,
+              repeat: Infinity,
               duration: 1,
             }}
           />
@@ -38,7 +38,7 @@ function Loader() {
             transform="translate(-7.69 -4.74)"
             animate={{ scale: [0, 0.9, 0] }}
             transition={{
-              loop: Infinity,
+              repeat: Infinity,
               duration: 1,
             }}
           />
@@ -47,7 +47,7 @@ function Loader() {
             transform="translate(-7.69 -4.74)"
             animate={{ scale: [0, 1, 0] }}
             transition={{
-              loop: Infinity,
+              repeat: Infinity,
               duration: 1,
             }}
           />

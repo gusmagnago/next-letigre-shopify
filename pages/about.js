@@ -11,7 +11,7 @@ function About() {
       <PageTitle text="OUR STORY" />
       <div className="justify-evenly flex flex-col w-10/12 min-h-screen px-2 mx-auto text-center">
         <p>
-          We don't have any story to tell yet, but hopefully you will now
+          We don't have any story to tell yet, but hopefully you will know
           everything about us soon
         </p>
         <Instagram />
